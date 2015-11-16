@@ -1,0 +1,116 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+Folgende Bauteile sind in der verwendeten Schaltung 1 vorhanden und haben folgende Größen:
+$$
+  L = 32.351\,mH, \quad
+  C = 0,801\,nF, \quad
+  C_{Sp} = 0,037\,nF, \quad
+  R = 48 \Omega
+$$
+Dabei waren für den Koppelkondensator folgende Größen einstellbar:
+\begin{table}[!h]
+    \centering
+    \caption{Werte für $C_k$}
+    \begin{tabular}{c}
+      \toprule
+      $C_k/\,nF$ \\
+      \midrule
+      9,99 \\
+      8,00 \\
+      6,47 \\
+      5,02 \\
+      4,00 \\
+      3,00 \\
+      2,03 \\
+      1,01 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+Dabei hat $C_k$ einen Fehler von 3\text{\%}.
+
+\subsection{Bestimmung der Resonanzfrequenz}
+
+Um die Resonanzfrequenz $f_+$ der beiden Kreise anzugleichen, muss zunächst die Resonanzfrequenz des
+ersten Kreises mit Hilfe der Lissajous-Figuren bestimmt werden. Diese ist erreicht, wenn
+die Lissajous-Figur eine Gerade ergibt, die Phase also gleich null ist.
+Um das Fenster zu verkleinern, in dem nach der Resonanzfrequenz gesucht werden muss, wird mit der theoretische Wert
+im Vorfeld berechnet:
+$$
+  f_{th} = \frac{1}{2 \pi \sqrt{LC}} = 31,255\,kHz
+$$
+Für die Resonanzfrequenz ergab sich:
+$$
+  f_{exp} = 30,3\,kHz
+$$
+Damit folgt eine Abweichung vom theoretischen zum expermintellen Wert von 1,03\text{\%}.
+\subsection{Verhältnis zwischen Schwingungs- und Schwebungsfrequenz}
+\label{sec:vss}
+
+Das Verhältnis zwischen Schwingungs- und Schwebungsfrequenz($\eta$) wird bestimmt, indem die Anzahl der Schwingungsbäuche durch die Gesamtzahl der in ihnen
+vorhandenen Maxima geteilt wird. Die genaue Berechnung erfolgt über:
+
+\begin{align}
+  \eta_{th} = \frac{f_- + f_+}{2(f_- - f_+)}
+\end{align}
+
+Dabei gilt für $f_+$:
+
+\begin{align}
+  f_+ = \frac{1}{2\pi\sqrt{L(C+C_{Sp})}}\,.
+\end{align}
+
+Und für $f_-$:
+
+\begin{align}
+  f_- = \frac{1}{2\pi\sqrt{L(\frac{1}{C}+\frac{2}{C_k})^{-1} + LC_{Sp}}}\,.
+\end{align}
+
+Daraus folgt mit den experimentell gemessenen Wert($\eta_{exp}$) und den theoretisch bestimmten Werten($f_-\text{und}\,f_+$), inklusive der
+Abweichung von $\eta_{exp}$ zu $\eta_{th}$, folgende Tabelle:
+
+\begin{table}[!h]
+    \centering
+    \caption{}
+    \begin{tabular}{c c c c c c}
+      \toprule
+      $C_k\,/\,nF$ & $\eta_{exp}$ & $f_+\,/\,kHz$ & $f_-\,/\,kHz$ & $\eta_{th}$ & $\text{Abweichung}\,/\,\text{\%}$ \\
+      \midrule
+      9,99 & 12 & 29,694 &  & & \\
+      8,00 & 11 & 29,694 & & & \\
+      6,47 & 9  & 29,694 & & & \\
+      5,02 & 7  & 29,694 & & & \\
+      4,00 & 6  & 29,694 & & & \\
+      3,00 & 5  & 29,694 & & & \\
+      2,03 & 4  & 29,694 & & & \\
+      1,01 & 2  & 29,694 & & & \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Bestimmen der Eigenfrequenzen}
+
+Die theoretisch und experimentell bestimmten Eigenfrequenzen($f_-^{th}, f_+^{th}, f_-^{exp} \text{und}\,f_+^{exp}$) sind, in abhängigkeit zum
+Koppelkondensator $C_k$, in Tabelle (\ref{tabeigenfr}) aufgelistet. Dazu kommen noch die Abweichungen zwischen den theoretischen und experimentellen
+Werten:
+
+\begin{table}[!h]
+    \centering
+    \caption{}
+    \label{tabeigenfr}
+    \begin{tabular}{c c c c c c c}
+      \toprule
+      $C_k\,/\,nF$ & ${f_+}^{exp}\,/\,kHz$ & ${f_-}^{exp}\,/\,kHz$ & ${f_+}^{th}\,/\,kHz$ & ${f_-}^{th}\,/\,kHz$ & $\text{Abw.}f_+\,/\,\text{\%}$ & $\text{Abw.}f_-\,/\,\text{\%}$ \\
+      \midrule
+      9,99 & 30,3 & 33,56 & 29,694 & & 2.041 & \\
+      8,00 & 30,3 & 34,01 & 29,694 & & 2.041 & \\
+      6,47 & 30,3 & 34,72 & 29,694 & & 2.041 & \\
+      5,02 & 30,3 & 35,21 & 29,694 & & 2.041 & \\
+      4,00 & 30,3 & 36,50 & 29,694 & & 2.041 & \\
+      3,00 & 30,3 & 37,59 & 29,694 & & 2.041 & \\
+      2,03 & 30,3 & 40,32 & 29,694 & & 2.041 & \\
+      1,01 & 30,3 & 47,17 & 29,694 & & 2.041 & \\
+      \bottomrule
+    \end{tabular}
+\end{table}
